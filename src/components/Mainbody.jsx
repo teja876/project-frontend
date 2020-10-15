@@ -40,7 +40,7 @@ export default function Mainbody() {
   return (
     <>
       <Container maxWidth="md">
-        {/* <Grid container spacing={3} direction="column">
+        <Grid container spacing={3} direction="column">
           <Grid item xs={12}>
             <FilterBar />
           </Grid>
@@ -50,8 +50,8 @@ export default function Mainbody() {
             <DoctorCard />
             <DoctorCard />
           </Grid>
-        </Grid> */}
-        <HospitalBody />
+        </Grid>
+        {/* <HospitalBody />*/}
       </Container>
     </>
   );
