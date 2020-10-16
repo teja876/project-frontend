@@ -225,10 +225,10 @@ export default function Navigation() {
           </div>
         </Toolbar>
       </AppBar>
-      <Toolbar />
 
       {renderMobileMenu}
       {renderMenu}
+      <Toolbar />
     </div>
   );
 }
