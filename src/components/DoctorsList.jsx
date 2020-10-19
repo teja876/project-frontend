@@ -15,9 +15,6 @@ import FilterBar from "./filterbar/FilterBar";
 import HospitalBody from "./hospitalbody";
 import DoctorPage from "./Doctorpage";
 import AdminHome from "./admin-components/home";
-import DoctorsList from "./DoctorsList";
-import UserProfile from "./UserProfile";
-import AppointmentsHistory from "./AppointmentsHistory";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
   wardStyle: {
     color: "crimson",
   },
+  marginStyle: {
+    marginTop: "30px",
+  },
 }));
 
 export default function Mainbody() {
@@ -44,17 +44,18 @@ export default function Mainbody() {
 
   return (
     <>
-      <Container maxWidth="md">
-        {/* <Grid container spacing={3} direction="column"> */}
-        {/* <Grid item xs={12}>
-            <FilterBar />
-          </Grid> */}
-        <AppointmentsHistory />
-        {/* </Grid> */}
-        {/* <HospitalBody /> */}
-        {/* <DoctorPage /> */}
-        {/* <AdminHome /> */}
-      </Container>
+      <Grid
+        container
+        direction="row"
+        justify="space-between"
+        spacing={3}
+        className={classes.marginStyle}
+      >
+        <DoctorCard />
+        <DoctorCard />
+        <DoctorCard />
+        <DoctorCard />
+      </Grid>
     </>
   );
 }

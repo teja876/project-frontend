@@ -126,9 +126,9 @@ const useStyles2 = makeStyles({
   deleteColor: {
     backgroundColor: "red",
   },
-  // button: {
-  //   margin: theme.spacing(1),
-  // },
+  overflow: {
+    overflow: "inherit",
+  },
 });
 
 export default function CustomPaginationActionsTable() {
@@ -221,6 +221,7 @@ export default function CustomPaginationActionsTable() {
         <TableFooter>
           <TableRow>
             <TablePagination
+              className={classes.overflow}
               rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
               colSpan={3}
               count={rows.length}
