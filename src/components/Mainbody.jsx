@@ -18,6 +18,8 @@ import AdminHome from "./admin-components/home";
 import DoctorsList from "./DoctorsList";
 import UserProfile from "./UserProfile";
 import AppointmentsHistory from "./AppointmentsHistory";
+import HospitalsList from "./hospitalsList";
+import ListOfAppointments from "./admin-components/listOfAppointments";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,11 +51,10 @@ export default function Mainbody() {
         {/* <Grid item xs={12}>
             <FilterBar />
           </Grid> */}
-        <AppointmentsHistory />
-        {/* </Grid> */}
-        {/* <HospitalBody /> */}
-        {/* <DoctorPage /> */}
+        {/* <AppointmentsHistory /> */}
+        <ListOfAppointments />
         {/* <AdminHome /> */}
+        {/* </Grid> */}
       </Container>
     </>
   );

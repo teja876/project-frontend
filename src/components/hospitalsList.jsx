@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DoctorsList() {
+export default function HospitalsList() {
   const classes = useStyles();
 
   return (
@@ -52,9 +52,9 @@ export default function DoctorsList() {
         className={classes.marginStyle}
       >
         <HospitalCard />
-        <DoctorCard />
-        <DoctorCard />
-        <DoctorCard />
+        <HospitalCard />
+        <HospitalCard />
+        <HospitalCard />
       </Grid>
     </>
   );

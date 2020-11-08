@@ -75,19 +75,19 @@ const headCells = [
     label: "Patient's Name",
   },
   {
-    id: "docName",
+    id: "contactNumber",
     numeric: true,
     disablePadding: false,
     label: "Doctor's Name",
   },
   {
-    id: "hospName",
+    id: "serviceName",
     numeric: true,
     disablePadding: false,
     label: "Hospital's Name",
   },
   {
-    id: "servie",
+    id: "docName",
     numeric: true,
     disablePadding: false,
     label: "Medical Service",
@@ -203,7 +203,7 @@ const EnhancedTableToolbar = (props) => {
           id="tableTitle"
           component="div"
         >
-          Appointments History(For Patients)
+          Appointments History(For Admins)
         </Typography>
       )}
 
@@ -252,7 +252,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AppointmentsHistory() {
+export default function ListOfAppointments() {
   const classes = useStyles();
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
@@ -365,9 +365,9 @@ export default function AppointmentsHistory() {
                       >
                         {row.name}
                       </TableCell>
-                      <TableCell align="right">Patient name</TableCell>
-                      <TableCell align="right">Doctor Name</TableCell>
-                      <TableCell align="right">Hospital name</TableCell>
+                      <TableCell align="right">Contact no</TableCell>
+                      <TableCell align="right">Service Name</TableCell>
+                      <TableCell align="right">Booked for</TableCell>
                       <TableCell align="right">Date</TableCell>
                       <TableCell align="right">status</TableCell>
                     </TableRow>

@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     color: "crimson",
   },
 }));
-export default function DoctorCard() {
+export default function HospitalCard() {
   const classes = useStyles();
 
   return (

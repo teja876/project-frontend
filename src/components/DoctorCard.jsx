@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     boxSizing: "border-box",
   },
 }));
-export default function HospitalCard() {
+export default function DoctorCard() {
   const classes = useStyles();
 
   return (

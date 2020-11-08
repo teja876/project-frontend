@@ -35,7 +35,7 @@ export default function HospitalCard() {
       <Paper className={classes.paper} elevation={3}>
         <form className={classes.root} noValidate autoComplete="off">
           <Grid container justify="space-between">
-            <TextField id="outlined-basic" label="Address" variant="outlined" />
+            <TextField id="outlined-basic" label="City" variant="outlined" />
             <TextField
               id="outlined-basic"
               label="Departments"
