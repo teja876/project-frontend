@@ -12,7 +12,7 @@ import HotelIcon from "@material-ui/icons/Hotel";
 import HospitalCard from "./HospitalCard";
 import DoctorCard from "./DoctorCard";
 import FilterBar from "./filterbar/FilterBar";
-import HospitalBody from "./hospitalbody";
+import HospitalBody from "./hospitalPage";
 import DoctorPage from "./Doctorpage";
 import AdminHome from "./admin-components/home";
 import DoctorsList from "./DoctorsList";
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Mainbody() {
+export default function HomeBody() {
   const classes = useStyles();
 
   return (
@@ -52,7 +52,7 @@ export default function Mainbody() {
             <FilterBar />
           </Grid> */}
         {/* <AppointmentsHistory /> */}
-        <ListOfAppointments />
+        <HospitalsList />
         {/* <AdminHome /> */}
         {/* </Grid> */}
       </Container>

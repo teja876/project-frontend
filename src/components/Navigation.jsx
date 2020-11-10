@@ -14,6 +14,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -171,7 +172,7 @@ export default function Navigation() {
             color="inherit"
             aria-label="open drawer"
           >
-            <MenuIcon />
+            <LocalHospitalIcon fontSize="large" />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             ProClinic

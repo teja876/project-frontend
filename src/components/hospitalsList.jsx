@@ -12,9 +12,10 @@ import HotelIcon from "@material-ui/icons/Hotel";
 import HospitalCard from "./HospitalCard";
 import DoctorCard from "./DoctorCard";
 import FilterBar from "./filterbar/FilterBar";
-import HospitalBody from "./hospitalbody";
+import HospitalBody from "./hospitalPage";
 import DoctorPage from "./Doctorpage";
 import AdminHome from "./admin-components/home";
+import hospitals from "../data/hospital";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,10 +52,9 @@ export default function HospitalsList() {
         spacing={3}
         className={classes.marginStyle}
       >
-        <HospitalCard />
-        <HospitalCard />
-        <HospitalCard />
-        <HospitalCard />
+        {hospitals.map((el) => (
+          <HospitalCard hospital={el} />
+        ))}
       </Grid>
     </>
   );

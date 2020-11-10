@@ -21,6 +21,7 @@ import FullWidthTabs from "../test";
 import TabPanels from "./tabPanels";
 import CustomPaginationActionsTable from "../test";
 import HospitalServicesList from "./HospitalServicesList";
+import Navigation from "../Navigation";
 
 const useStyles = makeStyles((theme) => ({
   inputButtonStyle: {
@@ -55,39 +56,44 @@ export default function AdminHome() {
   };
 
   return (
-    <Grid
-      container
-      spacing={3}
-      justify="space-between"
-      className={classes.topMargin}
-    >
-      <ProfilePicture />
-      <Grid item xs={12}>
-        <Divider />
-      </Grid>
+    <>
+      <Navigation />
+      <Container maxWidth="md">
+        <Grid
+          container
+          spacing={3}
+          justify="space-between"
+          className={classes.topMargin}
+        >
+          <ProfilePicture />
+          <Grid item xs={12}>
+            <Divider />
+          </Grid>
 
-      <Grid item xs={12}>
-        <Grid container alignItems="flex-end" justify="flex-end">
-          <HospitalDetails />
-          <Grid item xs={4}>
-            <Grid container justify="flex-end">
-              <Button
-                className={classes.inputButtonStyle}
-                color="primary"
-                variant="contained"
-              >
-                Edit Hospital Details
-              </Button>
+          <Grid item xs={12}>
+            <Grid container alignItems="flex-end" justify="flex-end">
+              <HospitalDetails />
+              <Grid item xs={4}>
+                <Grid container justify="flex-end">
+                  <Button
+                    className={classes.inputButtonStyle}
+                    color="primary"
+                    variant="contained"
+                  >
+                    Edit Hospital Details
+                  </Button>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
+
+          <Grid item xs={12}>
+            <Divider />
+          </Grid>
+
+          <HospitalServicesList />
         </Grid>
-      </Grid>
-
-      <Grid item xs={12}>
-        <Divider />
-      </Grid>
-
-      <HospitalServicesList />
-    </Grid>
+      </Container>
+    </>
   );
 }

@@ -17,6 +17,7 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import WardTable from "./wardsTable";
 import HospitalDetails from "./hospitalDetails";
+import Navigation from "./Navigation";
 
 const useStyles = makeStyles((theme) => ({
   hospitalImgStyle: {
@@ -42,26 +43,31 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function HospitalBody() {
+export default function HospitalPage() {
   const classes = useStyles();
 
   return (
-    <Grid container>
-      <Grid item xs={12} sm={4} className={classes.paddingStyle}>
-        <img
-          alt="Hospital"
-          className={classes.hospitalImgStyle}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS437RTVuHVQuWXRsZkMv_qUy7bhnNm7_g9Fg&usqp=CAU"
-        ></img>
-      </Grid>
+    <>
+      <Navigation />
+      <Container maxWidth="md">
+        <Grid container>
+          <Grid item xs={12} sm={4} className={classes.paddingStyle}>
+            <img
+              alt="Hospital"
+              className={classes.hospitalImgStyle}
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS437RTVuHVQuWXRsZkMv_qUy7bhnNm7_g9Fg&usqp=CAU"
+            ></img>
+          </Grid>
 
-      <HospitalDetails />
+          <HospitalDetails />
 
-      <HospitalServices />
+          <HospitalServices />
 
-      <WardTable />
+          <WardTable />
 
-      <DoctorsGallery />
-    </Grid>
+          <DoctorsGallery />
+        </Grid>
+      </Container>
+    </>
   );
 }

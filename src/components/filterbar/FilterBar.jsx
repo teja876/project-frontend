@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
 }));
-export default function HospitalCard() {
+export default function FilterBar() {
   const classes = useStyles();
 
   return (

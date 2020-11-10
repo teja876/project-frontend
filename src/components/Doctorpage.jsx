@@ -15,6 +15,7 @@ import HospitalServices from "./hospitalSevices";
 import DoctorsGallery from "./doctorsGallery";
 import PhoneIcon from "@material-ui/icons/Phone";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import Navigation from "./Navigation";
 
 const useStyles = makeStyles((theme) => ({
   hospitalImgStyle: {
@@ -47,54 +48,57 @@ export default function DoctorPage() {
   const classes = useStyles();
 
   return (
-    <Grid container>
-      <Grid item xs={12} sm={4} className={classes.paddingStyle}>
-        <img
-          alt="Hospital"
-          className={classes.hospitalImgStyle}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS437RTVuHVQuWXRsZkMv_qUy7bhnNm7_g9Fg&usqp=CAU"
-        ></img>
-      </Grid>
-      <Grid item xs={12} sm={8} className={classes.paddingStyle}>
-        <Typography variant="h4" gutterBottom color="primary">
-          <span>Doctor</span> Name
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-          blanditiis tenetur unde suscipit, quam beatae rerum inventore
-          consectetur, neque doloribus, cupiditate numquam dignissimos laborum
-          fugiat deleniti? Eum quasi quidem quibusdam.
-        </Typography>
-        <Typography
-          variant="h6"
-          gutterBottom
-          className={classes.marginStyle}
-          color="primary"
-        >
-          Contact Details:
-        </Typography>
-        <Typography variant="overline" display="block" gutterBottom>
-          <LocationOnIcon className={classes.locationIcon} />
-          Near Campus street, Banglore, Karnataka, D.no - 28-2-22
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          Email : doctor@gmail.com
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          Phone Number: 9409304923
-        </Typography>
-        <Typography>
-          <span>Specialization:</span> Department
-        </Typography>
-        <Typography>
-          <span>Cost of Consultation:</span> 1000/-
-        </Typography>
-      </Grid>
-      <Grid container justify="flex-end">
-        <Button className={classes.appointment}>Book an Appointment</Button>
-      </Grid>
-      {/* <HospitalServices />
-      <DoctorsGallery /> */}
-    </Grid>
+    <>
+      <Navigation />
+      <Container maxWidth="md">
+        <Grid container>
+          <Grid item xs={12} sm={4} className={classes.paddingStyle}>
+            <img
+              alt="Hospital"
+              className={classes.hospitalImgStyle}
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS437RTVuHVQuWXRsZkMv_qUy7bhnNm7_g9Fg&usqp=CAU"
+            ></img>
+          </Grid>
+          <Grid item xs={12} sm={8} className={classes.paddingStyle}>
+            <Typography variant="h4" gutterBottom color="primary">
+              <span>Doctor</span> Name
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+              blanditiis tenetur unde suscipit, quam beatae rerum inventore
+              consectetur, neque doloribus, cupiditate numquam dignissimos
+              laborum fugiat deleniti? Eum quasi quidem quibusdam.
+            </Typography>
+            <Typography
+              variant="h6"
+              gutterBottom
+              className={classes.marginStyle}
+              color="primary"
+            >
+              Contact Details:
+            </Typography>
+            <Typography variant="overline" display="block" gutterBottom>
+              <LocationOnIcon className={classes.locationIcon} />
+              Near Campus street, Banglore, Karnataka, D.no - 28-2-22
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              Email : doctor@gmail.com
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              Phone Number: 9409304923
+            </Typography>
+            <Typography>
+              <span>Specialization:</span> Department
+            </Typography>
+            <Typography>
+              <span>Cost of Consultation:</span> 1000/-
+            </Typography>
+          </Grid>
+          <Grid container justify="flex-end">
+            <Button className={classes.appointment}>Book an Appointment</Button>
+          </Grid>
+        </Grid>
+      </Container>
+    </>
   );
 }
